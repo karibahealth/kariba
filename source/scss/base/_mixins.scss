@@ -1,0 +1,26 @@
+@mixin jost() {
+    font-family: 'Jost', Sans-Serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+@mixin quincy() {
+    font-family: 'Quincy', Serif;
+    font-style: normal;
+    font-weight: 500;
+}
+
+@mixin imgscale() {
+    display: inline-block;
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+    width: 100%;
+}
+
+@mixin span($width) {
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+}

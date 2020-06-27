@@ -1,0 +1,164 @@
+div.common-content {
+
+    font-size: 16px;
+    line-height: 24px;
+
+    p {
+        padding-bottom: 24px;
+    }
+
+    em {
+        border-bottom: 1px solid transparent;
+    }
+
+    a {
+        border-bottom: 1px solid transparent;
+        transition: border $transition, color $transition;
+    }
+
+
+
+    &--style-sans {
+
+        @include jost();
+        font-size: 16px;
+        line-height: 24px;
+
+        p {
+            padding-bottom: 24px;
+        }
+    }
+
+    &--style-serif {
+
+        @include quincy();
+        font-size: 24px;
+        line-height: 36px;
+
+        h6 {
+            @include jost();
+            font-size: 16px;
+            line-height: 24px;
+        }
+
+        p {
+            padding-bottom: 35px;
+        }
+
+    }
+
+    &--theme-blue {
+
+        color: $white;
+
+        em {
+            border-color: $white;
+        }
+
+        a {
+
+            border-color: rgba($white, 0.3);
+            color: $white;
+
+            &:hover {
+                border-color: $white;
+            }
+
+        }
+
+    }
+
+    &--theme-blue-light {
+
+        color: $white;
+
+        em {
+            border-color: $white;
+        }
+
+        a {
+
+            border-color: rgba($white, 0.3);
+            color: $white;
+
+            &:hover {
+                border-color: $white;
+            }
+
+        }
+
+    }
+
+    &--theme-grey {
+
+        color: $black;
+
+        h6 {
+
+            color: $grey-dark;
+
+            em {
+                border-color: $grey-dark;
+            }
+
+        }
+
+        em {
+            border-color: $black;
+        }
+
+        a {
+
+            border-color: rgba($black, 0.3);
+            color: $black;
+
+            &:hover {
+                border-color: $black;
+            }
+
+        }
+
+    }
+
+    &--theme-white {
+
+        color: $black;
+
+        h6 {
+
+            color: $grey-dark;
+
+            em {
+                border-color: $grey-dark;
+            }
+
+        }
+
+        em {
+            border-color: $black;
+        }
+
+        a {
+
+            border-color: rgba($blue, 0.3);
+            color: $black;
+
+            &:hover {
+                border-color: $black;
+            }
+
+        }
+
+    }
+
+
+
+    @media(min-width: 1024px) {
+
+
+
+    }
+
+
+
+}

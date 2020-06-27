@@ -1,0 +1,120 @@
+div.footer {
+
+    @include span(full);
+    background: $grey;
+    position: relative;
+    user-select: none;
+
+    &__thanks,
+    &__legal {
+        float: left;
+        position: relative;
+        text-align: center;
+        width: 50%;
+    }
+
+    &__thanks {
+
+        a {
+
+            display: block;
+            height: 200px;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 528px;
+            position: relative;
+            width: 100%;
+
+            span {
+
+                background: $blue-light;
+                border-radius: 100%;
+                float: left;
+                height: 40px;
+                margin-top: 80px;
+                position: relative;
+                transition: background $transition;
+                width: 40px;
+
+                svg {
+
+                    left: 13px;
+                    position: absolute;
+                    top: 12px;
+
+                    path {
+                        fill: $white;
+                    }
+
+                }
+
+            }
+
+            strong {
+                @include jost();
+                color: $black;
+                float: left;
+                font-size: 14px;
+                font-weight: 500;
+                letter-spacing: 0.15em;
+                line-height: 16px;
+                margin-top: 92px;
+                position: relative;
+                text-transform: uppercase;
+                transition: color $transition;
+                width: calc(100% - 41px);
+            }
+
+            &:hover {
+
+                span {
+                    background: $blue;
+                }
+
+                strong {
+                    color: $blue;
+                }
+
+            }
+
+        }
+
+    }
+
+    &__legal {
+
+        p {
+            background: $blue;
+            color: $white;
+            float: left;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 16px;
+            padding: 92px 50px 92px 50px;
+            position: relative;
+            text-align: center;
+            width: calc(100% - 300px);
+        }
+
+        &:before {
+            background: $red;
+            border-radius: 100%;
+            content: '';
+            float: left;
+            height: 200px;
+            width: 200px;
+        }
+
+    }
+
+
+
+    @media(min-width: 1024px) {
+
+
+
+    }
+
+
+
+}

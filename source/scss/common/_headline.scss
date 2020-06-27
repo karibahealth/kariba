@@ -1,0 +1,62 @@
+div.common-headline {
+
+    font-size: 16px;
+    line-height: 24px;
+
+    h1 {
+        @include quincy();
+        font-size: 66px;
+        font-weight: 500;
+        line-height: 68px;
+    }
+
+    h2 {
+        @include jost();
+        font-size: 20px;
+        font-weight: 500;
+        letter-spacing: 0.15em;
+        line-height: 20px;
+        text-transform: uppercase;
+    }
+
+
+
+    &--theme-black {
+        color: $white;
+    }
+
+    &--theme-blue {
+        color: $white;
+    }
+
+    &--theme-blue-light {
+        color: $white;
+    }
+
+    &--theme-green {
+        color: $white;
+    }
+
+    &--theme-grey {
+        color: $black;
+    }
+
+    &--theme-red {
+        color: $white;
+    }
+
+    &--theme-white {
+        color: $black;
+    }
+
+
+
+    @media(min-width: 1024px) {
+
+
+
+    }
+
+
+
+}

@@ -1,0 +1,93 @@
+div.team {
+
+    @include span(full);
+    background: $grey;
+    position: relative;
+
+    &__grid,
+    &__ornament,
+    &__image {
+        float: left;
+        position: relative;
+    }
+
+    &__grid {
+        margin-bottom: 100px;
+        width: 600px;
+        z-index: 1;
+    }
+
+    &__ornament {
+        width: 200px;
+    }
+
+    &__image {
+
+        width: 400px;
+
+        figure {
+            border-radius: 100%;
+            float: left;
+            height: 400px;
+            overflow: hidden;
+            width: 400px;
+        }
+
+    }
+
+    &__headline {
+
+        @include span(full);
+        position: relative;
+
+        h2 {
+            background: $blue;
+            float: left;
+            padding: 91px 50px 89px 50px;
+            position: relative;
+            text-align: center;
+            width: 300px;
+        }
+
+        &:before {
+            background: $red;
+            border-radius: 100%;
+            content: '';
+            float: left;
+            height: 200px;
+            width: 200px;
+        }
+
+    }
+
+    &__content {
+        float: left;
+        margin: -11px 100px 93px 100px;
+        width: calc(100% - 200px);
+        z-index: 1;
+    }
+
+    &:before {
+        background: $white;
+        content: '';
+        height: 200px;
+        left: -20px;
+        position: absolute;
+        width: calc(100% + 40px);
+    }
+
+
+
+    @media(min-width: 1280px) {
+
+        &__content {
+            margin-top: 289px;
+            max-width: 900px;
+            width: calc(100% - 800px);
+        }
+
+    }
+
+
+
+}
