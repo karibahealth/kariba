@@ -89,6 +89,7 @@ div.faq {
 
         ul li {
             margin-bottom: 10px;
+            position: relative;
         }
 
     }
@@ -166,9 +167,21 @@ div.faq {
                 padding-top: 2px;
 
                 &:not(:last-child) {
-                    border-right: 1px solid $white;
+
                     margin-right: 25px;
-                    padding-right: 25px;
+                    padding-right: 29px;
+
+                    &:before {
+                        background: $white;
+                        border-radius: 100%;
+                        content: '';
+                        height: 4px;
+                        position: absolute;
+                        right: 0;
+                        top: 11px;
+                        width: 4px;
+                    }
+
                 }
 
             }
