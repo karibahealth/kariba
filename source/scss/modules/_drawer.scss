@@ -34,10 +34,9 @@ div.drawer {
 
     &__logo {
 
-        @include span();
-        margin-bottom: 45px;
-        margin-top: 125px;
-        position: relative;
+        position: absolute;
+        top: 125px;
+        width: 100%;
 
         svg {
             display: inline-block;
@@ -47,9 +46,11 @@ div.drawer {
 
     &__options {
 
-        float: left;
-        margin: 0 30px 45px 30px;
-        position: relative;
+        height: calc(100% - 280px);
+        margin-left: 30px;
+        margin-right: 30px;
+        position: absolute;
+        top: 179px;
         width: calc(100% - 60px);
 
         ul {
@@ -90,19 +91,9 @@ div.drawer {
     }
 
     &__booking {
-        @include span();
-        margin-bottom: 60px;
-        position: relative;
+        bottom: 60px;
+        position: absolute;
+        width: 100%;
     }
-
-
-
-    @media(min-width: 1024px) {
-
-
-
-    }
-
-
 
 }
