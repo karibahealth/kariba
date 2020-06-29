@@ -17,11 +17,11 @@ div.common-social {
                 background: $black;
                 border-radius: 100%;
                 display: block;
-                height: 36px;
+                height: 40px;
                 pointer-events: auto;
                 position: relative;
                 transition: background $transition;
-                width: 36px;
+                width: 40px;
 
                 svg {
 
@@ -43,25 +43,25 @@ div.common-social {
 
             &.twitter svg {
                 height: 13px;
-                left: 10px;
-                top: 12px;
+                left: 12px;
+                top: 14px;
             }
 
             &.instagram svg {
-                left: 10px;
-                top: 10px;
+                left: 12px;
+                top: 12px;
             }
 
             &.facebook svg {
-                left: 14px;
-                top: 10px;
+                left: 16px;
+                top: 12px;
                 width: 7px;
             }
 
             &.email svg {
                 height: 12px;
-                left: 10px;
-                top: 12px;
+                left: 12px;
+                top: 14px;
             }
 
             &:not(:last-child) {

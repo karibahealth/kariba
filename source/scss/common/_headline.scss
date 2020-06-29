@@ -1,13 +1,13 @@
 div.common-headline {
 
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 14px;
+    line-height: 20px;
 
     h1 {
         @include quincy();
-        font-size: 66px;
+        font-size: 53px;
         font-weight: 500;
-        line-height: 68px;
+        line-height: 53px;
     }
 
     h2 {
@@ -15,15 +15,11 @@ div.common-headline {
         font-size: 20px;
         font-weight: 500;
         letter-spacing: 0.15em;
-        line-height: 20px;
+        line-height: 25px;
         text-transform: uppercase;
     }
 
 
-
-    &--theme-black {
-        color: $white;
-    }
 
     &--theme-blue {
         color: $white;
@@ -41,10 +37,6 @@ div.common-headline {
         color: $black;
     }
 
-    &--theme-red {
-        color: $white;
-    }
-
     &--theme-white {
         color: $black;
     }
@@ -53,7 +45,13 @@ div.common-headline {
 
     @media(min-width: 1024px) {
 
+        font-size: 16px;
+        line-height: 24px;
 
+        h1 {
+            font-size: 66px;
+            line-height: 68px;
+        }
 
     }
 

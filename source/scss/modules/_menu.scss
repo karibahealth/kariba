@@ -2,10 +2,10 @@ div.menu {
 
     height: 90px;
     position: fixed;
-    right: 20px;
+    right: 0;
     top: 0;
     width: 90px;
-    z-index: 1004;
+    z-index: 1003;
 
     button {
 
@@ -43,7 +43,7 @@ div.menu {
 
             &:after {
                 top: 7px;
-                width: 50%;
+                width: 100%;
             }
 
         }
@@ -67,7 +67,7 @@ div.menu {
 
         button span {
 
-            transform: rotate(225deg);
+            transform: rotate(135deg);
             transition: background $transition, transform $transition;
 
             &:before {
@@ -78,7 +78,7 @@ div.menu {
 
             &:after {
                 top: 0;
-                transform: rotate(-90deg);
+                transform: rotate(90deg);
                 transition: background $transition, top $transition, transform $transition, width $transition;
                 width: 100%;
             }

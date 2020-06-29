@@ -1,5 +1,5 @@
 div.drawer-overlay {
-    background: rgba($black, 0.8);
+    background: rgba($black, 0.5);
     height: 100%;
     left: 0;
     opacity: 0;
@@ -8,7 +8,7 @@ div.drawer-overlay {
     user-select: none;
     visibility: hidden;
     width: 100%;
-    z-index: 1001;
+    z-index: 1000;
 }
 
 
@@ -16,48 +16,65 @@ div.drawer-overlay {
 div.drawer {
 
     background: $grey;
+    font-size: 0;
     height: 100%;
     left: 0;
+    line-height: 0;
     -webkit-overflow-scrolling: touch;
     opacity: 0;
     overflow-x: hidden;
     overflow-y: scroll;
     position: fixed;
+    text-align: center;
     top: 0;
     user-select: none;
     visibility: hidden;
     width: 100%;
-    z-index: 1002;
+    z-index: 1001;
+
+    &__logo {
+
+        @include span();
+        margin-bottom: 45px;
+        margin-top: 125px;
+        position: relative;
+
+        svg {
+            display: inline-block;
+        }
+
+    }
 
     &__options {
 
-        bottom: 0;
-        height: 100%;
-        margin-left: 30px;
-        margin-right: 30px;
-        position: absolute;
+        float: left;
+        margin: 0 30px 45px 30px;
+        position: relative;
         width: calc(100% - 60px);
-        z-index: 1;
 
         ul {
 
-            @include span(full);
-            font-size: 0;
-            line-height: 0;
-            text-align: center;
+            @include span();
 
             li {
 
-                @include span(full);
+                @include span();
 
                 a {
+
                     color: $black;
                     display: inline-block;
+                    font-size: 14px;
+                    font-weight: 500;
+                    letter-spacing: 0.15em;
+                    line-height: 20px;
+                    padding-bottom: 10px;
+                    padding-top: 10px;
                     text-transform: uppercase;
                     transition: color $transition;
 
                     &:hover {
-
+                        color: $blue;
                     }
 
                 }
@@ -70,6 +87,12 @@ div.drawer {
 
         }
 
+    }
+
+    &__booking {
+        @include span();
+        margin-bottom: 60px;
+        position: relative;
     }
 
 

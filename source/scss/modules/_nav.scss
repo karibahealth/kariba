@@ -3,14 +3,12 @@ div.nav {
     background: $grey;
     height: 90px;
     left: 0;
-    padding-left: 20px;
-    padding-right: 20px;
     position: fixed;
     transition: box-shadow $transition, height $transition;
     top: 0;
     user-select: none;
-    width: calc(100% - 40px);
-    z-index: 1003;
+    width: 100%;
+    z-index: 1002;
 
     &__options {
 
@@ -54,10 +52,6 @@ div.nav {
                     margin-right: 35px;
                 }
 
-                &.selected a {
-
-                }
-
             }
 
         }
@@ -67,8 +61,23 @@ div.nav {
     &__social {
         float: left;
         margin-left: 30px;
-        margin-top: 27px;
+        margin-top: 25px;
+        position: relative;
         transition: margin-top $transition;
+    }
+
+
+
+    @media(min-width: 1024px) {
+
+        padding-left: 20px;
+        padding-right: 20px;
+        width: calc(100% - 40px);
+
+        &__social {
+            margin-left: 10px;
+        }
+
     }
 
 
@@ -85,7 +94,7 @@ div.nav {
             float: right;
             margin-left: 0;
             margin-right: 100px;
-            margin-top: 87px;
+            margin-top: 85px;
         }
 
         &--slim {
@@ -97,20 +106,12 @@ div.nav {
             }
 
             div.nav__social {
-                margin-top: 27px;
+                margin-top: 25px;
             }
 
         }
 
     }
-
-
-
-}
-
-
-
-body.mobile {
 
 
 

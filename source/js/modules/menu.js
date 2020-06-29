@@ -21,14 +21,14 @@ var menu = {
         gsap.set($('div.drawer__options ul li'), {
 
             autoAlpha: 0,
-            yPercent: -30
+            yPercent: -20
 
         });
 
         gsap.set($('div.drawer__booking'), {
 
             autoAlpha: 0,
-            yPercent: -30
+            yPercent: -20
 
         });
 
@@ -89,7 +89,7 @@ var menu = {
         gsap.to($('div.drawer__options ul li'), {
 
             duration: 0.5,
-            delay: 0.6,
+            delay: 0.5,
             autoAlpha: 1,
             yPercent: 0,
             stagger: 0.05,
@@ -100,7 +100,7 @@ var menu = {
         gsap.to($('div.drawer__booking'), {
 
             duration: 0.5,
-            delay: 0.8,
+            delay: 0.7,
             autoAlpha: 1,
             yPercent: 0,
             ease: Power2.easeOut
@@ -147,14 +147,14 @@ var menu = {
                 gsap.set($('div.drawer__options ul li'), {
 
                     autoAlpha: 0,
-                    yPercent: -30
+                    yPercent: -20
 
                 });
 
                 gsap.set($('div.drawer__booking'), {
 
                     autoAlpha: 0,
-                    yPercent: -30
+                    yPercent: -20
 
                 });
 

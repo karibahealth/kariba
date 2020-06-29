@@ -1,38 +1,31 @@
 div.footer {
 
-    @include span(full);
+    @include span();
     background: $grey;
     position: relative;
     user-select: none;
 
-    &__thanks,
-    &__legal {
-        float: left;
-        position: relative;
-        text-align: center;
-        width: 50%;
-    }
-
     &__thanks {
+
+        float: left;
+        margin: 57px 30px;
+        position: relative;
+        width: calc(100% - 60px);
 
         a {
 
+            @include span();
             display: block;
-            height: 200px;
-            margin-left: auto;
-            margin-right: auto;
-            max-width: 528px;
             position: relative;
-            width: 100%;
 
             span {
 
                 background: $blue-light;
                 border-radius: 100%;
-                float: left;
                 height: 40px;
-                margin-top: 80px;
-                position: relative;
+                position: absolute;
+                right: 0;
+                top: calc(50% - 20px);
                 transition: background $transition;
                 width: 40px;
 
@@ -58,11 +51,9 @@ div.footer {
                 font-weight: 500;
                 letter-spacing: 0.15em;
                 line-height: 16px;
-                margin-top: 92px;
-                position: relative;
                 text-transform: uppercase;
                 transition: color $transition;
-                width: calc(100% - 41px);
+                width: calc(100% - 60px);
             }
 
             &:hover {
@@ -81,28 +72,43 @@ div.footer {
 
     }
 
+    &__ornament {
+        float: left;
+        width: 125px;
+    }
+
     &__legal {
 
+        background: $blue;
+        float: left;
+        height: 125px;
+        position: relative;
+        width: calc(100% - 125px);
+
         p {
-            background: $blue;
             color: $white;
-            float: left;
-            font-size: 14px;
+            font-size: 12px;
             font-weight: 500;
-            line-height: 16px;
-            padding: 92px 50px 92px 50px;
-            position: relative;
+            letter-spacing: 0.03em;
+            line-height: 18px;
+            margin-left: 30px;
+            margin-right: 30px;
+            position: absolute;
             text-align: center;
-            width: calc(100% - 300px);
+            top: 50%;
+            transform: translateY(-50%);
+            width: calc(100% - 60px);
         }
 
-        &:before {
-            background: $red;
-            border-radius: 100%;
-            content: '';
-            float: left;
-            height: 200px;
-            width: 200px;
+    }
+
+
+
+    @media(min-width: 568px) {
+
+        &__thanks a strong br,
+        &__legal p br {
+            display: none;
         }
 
     }
@@ -111,7 +117,69 @@ div.footer {
 
     @media(min-width: 1024px) {
 
+        &__thanks {
 
+            margin: 0 50px;
+            width: calc(50% - 100px);
+
+            a {
+
+                height: 200px;
+
+                span {
+                    left: 0;
+                    right: auto;
+                }
+
+                strong {
+
+                    float: none;
+                    margin-left: 60px;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+
+                    br {
+                        display: inline;
+                    }
+
+                }
+
+            }
+
+        }
+
+        &__ornament {
+            width: 200px;
+        }
+
+        &__legal {
+
+            height: 200px;
+            width: calc(50% - 200px);
+
+            p {
+
+                font-size: 14px;
+
+                br {
+                    display: inline;
+                }
+
+            }
+
+        }
+
+    }
+
+
+
+    @media(min-width: 1280px) {
+
+        &__thanks a strong br,
+        &__legal p br {
+            display: none;
+        }
 
     }
 

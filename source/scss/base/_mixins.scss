@@ -18,7 +18,7 @@
     width: 100%;
 }
 
-@mixin span($width) {
+@mixin span() {
     float: left;
     margin-left: 0;
     margin-right: 0;

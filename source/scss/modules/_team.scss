@@ -1,87 +1,140 @@
 div.team {
 
-    @include span(full);
+    @include span();
     background: $grey;
     position: relative;
 
-    &__grid,
-    &__ornament,
-    &__image {
-        float: left;
-        position: relative;
-    }
-
     &__grid {
-        margin-bottom: 100px;
-        width: 600px;
+        @include span();
+        position: relative;
         z-index: 1;
     }
 
     &__ornament {
-        width: 200px;
+
+        float: left;
+        user-select: none;
+        width: 125px;
+
+        &--secondary {
+            clear: both;
+        }
+
     }
 
     &__image {
 
-        width: 400px;
+        float: left;
+        user-select: none;
+        width: 250px;
 
         figure {
             border-radius: 100%;
             float: left;
-            height: 400px;
+            height: 250px;
             overflow: hidden;
-            width: 400px;
+            width: 250px;
         }
 
     }
 
     &__headline {
 
-        @include span(full);
+        background: $blue;
+        float: left;
+        height: 125px;
         position: relative;
+        width: calc(100% - 125px);
 
         h2 {
-            background: $blue;
-            float: left;
-            padding: 91px 50px 89px 50px;
-            position: relative;
+            margin-left: 30px;
+            margin-right: 30px;
+//             position: absolute;
             text-align: center;
-            width: 300px;
-        }
-
-        &:before {
-            background: $red;
-            border-radius: 100%;
-            content: '';
-            float: left;
-            height: 200px;
-            width: 200px;
+//             top: 50%;
+//             transform: translateY(-50%);
+            width: calc(100% - 60px);
         }
 
     }
 
     &__content {
         float: left;
-        margin: -11px 100px 93px 100px;
-        width: calc(100% - 200px);
+        margin: 52px 30px 55px 30px;
+        text-align: center;
+        width: calc(100% - 60px);
         z-index: 1;
     }
 
     &:before {
         background: $white;
         content: '';
-        height: 200px;
-        left: -20px;
+        height: 125px;
+        left: 0;
         position: absolute;
-        width: calc(100% + 40px);
+        width: 100%;
+    }
+
+
+
+    @media(min-width: 1024px) {
+
+        &__grid {
+            width: 600px;
+        }
+
+        &__ornament {
+            width: 200px;
+        }
+
+        &__image {
+
+            width: 400px;
+
+            figure {
+                height: 400px;
+                width: 400px;
+            }
+
+        }
+
+        &__headline {
+
+            height: 200px;
+            width: calc(100% - 200px);
+
+            h2 {
+                margin-left: 50px;
+                margin-right: 50px;
+                width: calc(100% - 100px);
+            }
+
+        }
+
+        &__content {
+            margin: 90px 100px 95px 100px;
+            text-align: left;
+            width: calc(100% - 200px);
+        }
+
+        &:before {
+            height: 200px;
+            left: -20px;
+            width: calc(100% + 40px);
+        }
+
     }
 
 
 
     @media(min-width: 1280px) {
 
+        &__grid {
+            margin-bottom: 100px;
+        }
+
         &__content {
-            margin-top: 289px;
+            margin-top: 290px;
             max-width: 900px;
             width: calc(100% - 800px);
         }

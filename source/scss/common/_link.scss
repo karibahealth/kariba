@@ -9,6 +9,7 @@ a.common-link {
     text-decoration: none;
     transition: background $transition;
     user-select: none;
+    white-space: nowrap;
 
     strong {
         @include jost();
@@ -55,7 +56,7 @@ a.common-link {
         background: $red;
 
         span {
-            background: $red-light;
+            background: $yellow;
         }
 
     }
