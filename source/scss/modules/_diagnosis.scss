@@ -50,6 +50,7 @@ div.diagnosis {
         float: left;
         margin-left: 30px;
         margin-right: 30px;
+        position: relative;
         text-align: center;
         width: calc(100% - 60px);
     }
@@ -82,17 +83,75 @@ div.diagnosis {
     }
 
     &__conditions {
-
         margin-bottom: 33px;
+        user-select: none;
+    }
 
-        ul li {
-            color: $blue-light;
-            font-size: 14px;
-            font-weight: 500;
-            letter-spacing: 0.15em;
-            line-height: 18px;
-            margin-bottom: 18px;
-            text-transform: uppercase;
+    &__slides {
+
+        @include span();
+        position: relative;
+
+        ul {
+
+            @include span();
+            position: relative;
+
+            li {
+                @include span();
+                color: $blue-light;
+                font-size: 14px;
+                font-weight: 500;
+                letter-spacing: 0.15em;
+                line-height: 18px;
+                margin-bottom: 18px;
+                position: relative;
+                text-transform: uppercase;
+            }
+
+        }
+
+    }
+
+    &__control {
+
+        position: absolute;
+        top: calc(50% - 30px);
+
+        a {
+
+            background: $blue;
+            border-radius: 100%;
+            display: block;
+            height: 41px;
+            position: relative;
+            transition: background $transition;
+            width: 41px;
+
+            svg {
+
+                left: 13px;
+                position: absolute;
+                top: 13px;
+
+                path {
+                    fill: $white;
+                }
+
+            }
+
+            &:hover {
+                background: $black;
+            }
+
+        }
+
+        &--previous {
+            left: 0;
+        }
+
+        &--next {
+            right: 0;
         }
 
     }
@@ -183,16 +242,16 @@ div.diagnosis {
                 max-width: 700px;
             }
 
+        }
+
+        &__control {
+            display: none;
+        }
+
+        &__slides {
+
             ul {
-
-                float: left;
-                width: calc(33.33% - 33px);
-
-                &:not(:last-child) {
-                    margin-right: 50px;
-                    width: calc(33.33% - 34px);
-                }
-
+                width: 33.33%;
             }
 
         }

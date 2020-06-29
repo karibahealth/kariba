@@ -6,7 +6,7 @@ var footer = {
 
             gsap.to(window, {
 
-                duration: 0.9,
+                duration: 1.0,
                 ease: 'Power2.easeInOut',
                 scrollTo: {
 

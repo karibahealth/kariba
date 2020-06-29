@@ -32,7 +32,7 @@ var nav = {
 
             gsap.to(window, {
 
-                duration: 0.9,
+                duration: 0.75,
                 ease: 'Power2.easeInOut',
                 scrollTo: {
 
