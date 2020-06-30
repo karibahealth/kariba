@@ -7,7 +7,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/seanmitchell/kariba"
+    "url": "https://github.com/karibahealth/kariba"
   },
   "dependencies": {
     "@babel/core": "^7.10.3",
