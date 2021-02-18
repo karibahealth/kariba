@@ -665,7 +665,16 @@ div.banner__circle {
 	float: left;
 	height: 250px;
 	position: relative;
-	width: 250px
+	width: 250px;
+	border-top: 25%
+}
+div.banner__medeo{
+	/*margin-top:750px;*/
+	/*margin-bottom:750px;*/
+	margin-left:20%;
+	margin-right:20%;
+	  /*-ms-transform: translate(0%, 150%);*/
+  	transform: translate(0, 270%);
 }
 div.banner__circle h2 {
 	font-family: Jost, Sans-Serif;
