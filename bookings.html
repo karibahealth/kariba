@@ -101,51 +101,51 @@
         <option value="followup">Followup (existing issue)</option>
         <option value="results">Discuss results</option>
         <option value="referral">Referral question</option>
-        <option value="referral">Other (please give details below)</option>
+        <option value="other">Other (please give details below)</option>
         
       </select>
       <label for="typeextra"> More information</label>
-    <textarea rows="3" name="typeextra" id="typeextra" placeholder="Please give any extra information here."></textarea>
+    <textarea rows="3" name="type_extra_info" id="typeextra" placeholder="Please give any extra information here."></textarea>
     
       <label for="urgency">2. How urgently do you want to be seen?</label>
-      <select name="uryenct" id="urgency" required="">
+      <select name="urgency" id="urgency" required="">
         <option value="Choose" selected="" disabled="">Choose</option>
         <option value="urgent">Urgent</option>
         <option value="soon">Soon</option>
-        <option value="no_urgent">Not urgent</option>
+        <option value="not_urgent">Not urgent</option>
         <option value="after_date">After a specific date</option>
       </select>
       <label for="urgencyextra"> Details</label>
-    <textarea rows="3" name="urgencyextra" id="urgencyextra" placeholder="Please give any specifics here."></textarea>
+    <textarea rows="3" name="urgency_details" id="urgencyextra" placeholder="Please give any specifics here."></textarea>
      
       <label for="day">3. Which days are you available? (select all that apply)</label>
         <label>
-            <input type="checkbox" name="monday" value="monday"> Monday
+            <input type="checkbox" name="available_monday" value="yes"> Monday
          </label>
           <label>
-            <input type="checkbox" name="tuesday" value="tuesday"> Tuesday
+            <input type="checkbox" name="available_tuesday" value="yes"> Tuesday
          </label>
             <label>
-            <input type="checkbox" name="wednesday" value="wednesday"> Wednesday
+            <input type="checkbox" name="available_wednesday" value="yes"> Wednesday
          </label>
               <label>
-            <input type="checkbox" name="thursday" value="thursday"> Thursday
+            <input type="checkbox" name="available_thursday" value="yes"> Thursday
          </label>
                 <label>
-            <input type="checkbox" name="friday" value="friday"> Friday
+            <input type="checkbox" name="available_friday" value="yes"> Friday
          </label>
         <label for="time">4. What times available? (select all that apply)</label>
         <label>
-            <input type="checkbox" name="monday" value="monday"> Mornings
+            <input type="checkbox" name="time_available_mornings" value="yes"> Mornings
          </label>
           <label>
-            <input type="checkbox" name="tuesday" value="tuesday"> Afternoons
+            <input type="checkbox" name="time_available_afternoons" value="yes"> Afternoons
          </label>
-            <label for="specific">Only specific times </label>
+            <label for="time_available_specific">Only specific times </label>
     <textarea rows="2" name="specific" id="specific" placeholder="Please give information about when you're available so we can do our best to accomodate." ></textarea>
         
         <label>
-            <input type="checkbox" name="nurse" value="nurse"> I am happy to speak to a nurse, when appropriate (usually available sooner)
+            <input type="checkbox" name="talk_with_nurse" value="yes"> I am happy to speak to a nurse, when appropriate (usually available sooner)
          </label>
           
     </fieldset>
@@ -154,7 +154,7 @@
             <input type="checkbox" name="understand" value="understand" required=""> I understand that this is not a confirmed appointment, but a request.
          </label>
               <label>
-            <input type="checkbox" name="consent" value="consent" required=""> I consent to electronic communication. &nbsp <a href="https://www.cmpa-acpm.ca/en/advice-publications/browse-articles/2013/using-electronic-communications-protecting-privacy">more information</a>
+            <input type="checkbox" name="consent" value="yes" required=""> I consent to electronic communication. &nbsp <a href="https://www.cmpa-acpm.ca/en/advice-publications/browse-articles/2013/using-electronic-communications-protecting-privacy">more information</a>
          </label>
             <input type="hidden" name="_subject" id="email-subject" value="Booking Request">
   </fieldset>
