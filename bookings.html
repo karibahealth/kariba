@@ -14,7 +14,7 @@
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://kariba.ca" />
         <meta property="og:title" content="Kariba &mdash; Your doctor. Simple." />
-        <meta property="og:description" content="Kariba is a virtual family practice taking care of all ages from babies to the most elderly. See your doctor in a new way." />
+        <meta property="og:description" content="Kariba is a family practice taking care of all ages from babies to the most elderly. See your doctor in a new way." />
         <meta property="og:image" content="https://kariba.ca/-/img/opengraph.png" />
 
         <script type="application/ld+json">
@@ -48,24 +48,17 @@
                     </div>
                 </div>
 
-                <div class="banner">
-                     <div class="banner__content common-content common-content--style-serif common-content--theme-grey">
-                        <p>Kariba Health always seeks to provide the best care and solutions to our patients. We now provide booking, messaging and
-                        video appointments through Medeo. If you haven't yet signed up, please call the clinic at 604 493 2251 or visit Medeo</p>
-                        <!-- <h6>Medeo</h6> -->
-
+                <div class="booking"><!-- 
+                    <div class="banner__headline common-headline common-headline--theme-grey">
+                        <h1>Request an appointment.</h1>
+                    </div> -->
+                     <div class="booking__headline common-content common-content--style-serif common-content--theme-grey">
+                        <p>Kariba Health has always tried to provide the very best way for each patient to be cared for. We will continue to work on improving and simplifying as issue arise. </p>
                     </div>
-                    <div class="banner__grid">
-                        <div class="banner__circle">
-                            <div class="banner__medeo">
-                                <a href="https://medeohealth.com/"><img src="-/svg/Medeo-Header-logo-white.svg" alt="" /></a>
-                            </div>
-                            <!-- <h2>Now Welcoming Patients</h2> -->
-                        </div>
-                        <!-- <div class="banner__ornament"> -->
-                            <!-- <img src="-/svg/ornament-banner.svg" alt="" /> -->
-                        <!-- </div> -->
+                    <div class="booking__content common-content common-content--theme-white">
+                        <p>Please use our new simpler booking form to request your next appointment and you will be notified by email when we have made your booking.</p>
                     </div>
+                </div>
                     <!-- <div class="banner__booking">
                         <a href="https://medeohealth.com/" class="common-link" target="_blank" rel="noopener">
                             <strong>Make an Appointment</strong>
@@ -74,10 +67,212 @@
                             </span>
                         </a>
                     </div> -->
-                   
-                </div>
+                 <!--   
+                <div class="banner__grid">
+                        <div class="banner__circle">
+                            <div class="banner__medeo">
+                            </div>
+                        </div>
+                    </div> -->
+                        <div class="form">
+
+                        <!-- <form  action="https://formspree.io/f/{form_id}" method="post"> -->
+                            <form id="fs-frm" name="booking-form" accept-charset="utf-8" action="https://formspree.io/f/{form_id}" method="post">
+  <fieldset id="fs-frm-inputs">
+    <label for="full-name">Full Name</label>
+    <input type="text" name="name" id="full-name" placeholder="First and Last" required="">
+      
+    <label for="phone">Phone number</label>
+    <input type="phone" name="_phone" id="phone" placeholder="604 555 9999" required=""> 
+    <label for="email-address">Email Address</label>
+    <input type="email" name="_replyto" id="email-address" placeholder="email@domain.tld" required="">
+      <label for="phn-last">Last 4 digits of your Health card number</label>
+    <input type="number" name="phn" id="phn-digits" placeholder="9999" required="">
+    <fieldset id="fs-frm-selects">
+       <label for="type">1. What is the primary concern for this appointment?</label>
+      <select name="type" id="type" required="">
+        <option value="Choose" selected="" disabled="">Choose</option>
+        <option value="general">Consultation (new issue)</option>
+        <option value="presciption">Prescription</option>
+        <option value="counselling">Councelling</option>
+        <option value="well_baby">Well Baby Checkup/Immunization</option>
+        <option value="womens_health">Womens Health/Pap</option>
+        <option value="skin">Skin Concern</option>
+        <option value="followup">Followup (existing issue)</option>
+        <option value="results">Discuss results</option>
+        <option value="referral">Referral question</option>
+        <option value="referral">Other (please give details below)</option>
+        
+      </select>
+      <label for="typeextra"> More information</label>
+    <textarea rows="3" name="typeextra" id="typeextra" placeholder="Please give any extra information here." required=""></textarea>
+    
+      <label for="urgency">2. How urgently do you want to be seen?</label>
+      <select name="uryenct" id="urgency" required="">
+        <option value="Choose" selected="" disabled="">Choose</option>
+        <option value="urgent">Urgent</option>
+        <option value="soon">Soon</option>
+        <option value="no_urgent">Not urgent</option>
+        <option value="after_date">After a specific date</option>
+      </select>
+      <label for="urgencyextra"> Details</label>
+    <textarea rows="3" name="urgencyextra" id="urgencyextra" placeholder="Please give any specifics here." required=""></textarea>
+     
+      <label for="day">3. Which days are you available? (select all that apply)</label>
+        <label>
+            <input type="checkbox" name="monday" value="monday"> Monday
+         </label>
+          <label>
+            <input type="checkbox" name="tuesday" value="tuesday"> Tuesday
+         </label>
+            <label>
+            <input type="checkbox" name="wednesday" value="wednesday"> Wednesday
+         </label>
+              <label>
+            <input type="checkbox" name="thursday" value="thursday"> Thursday
+         </label>
+                <label>
+            <input type="checkbox" name="friday" value="friday"> Friday
+         </label>
+        <label for="time">4. What times available? (select all that apply)</label>
+        <label>
+            <input type="checkbox" name="monday" value="monday"> Mornings
+         </label>
+          <label>
+            <input type="checkbox" name="tuesday" value="tuesday"> Afternoons
+         </label>
+            <label for="specific">Only specific times </label>
+    <textarea rows="2" name="specific" id="specific" placeholder="Please give information about when you're available so we can do our best to accomodate." required=""></textarea>
+        
+        <label>
+            <input type="checkbox" name="nurse" value="nurse"> I am happy to speak to a nurse, when appropriate (usually available sooner)
+         </label>
+          
+    </fieldset>
+    
+            <label>
+            <input type="checkbox" name="understand" value="understand" required=""> I understand that this is not a confirmed appointment, but a request.
+         </label>
+              <label>
+            <input type="checkbox" name="consent" value="consent" required=""> I consent to electronic communication. &nbsp <a href="https://www.cmpa-acpm.ca/en/advice-publications/browse-articles/2013/using-electronic-communications-protecting-privacy">more information</a>
+         </label>
+            <input type="hidden" name="_subject" id="email-subject" value="Booking Request">
+  </fieldset>
+  <input type="submit" value="Submit Request">
+</form>
+<style>/* reset */
+#fs-frm input,
+#fs-frm select,
+#fs-frm textarea,
+#fs-frm fieldset,
+#fs-frm optgroup,
+#fs-frm label,
+#fs-frm #card-element:disabled {
+  font-family: inherit;
+  font-size: 100%;
+  color: inherit;
+  border: none;
+  border-radius: 0;
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+#fs-frm label,
+#fs-frm legend,
+#fs-frm ::placeholder {
+  font-size: .825rem;
+  margin-bottom: .5rem;
+  padding-top: .2rem;
+  display: flex;
+  align-items: baseline;
+}
+
+/* border, padding, margin, width */
+#fs-frm input,
+#fs-frm select,
+#fs-frm textarea,
+#fs-frm #card-element {
+  border: 1px solid rgba(0,0,0,0.2);
+  background-color: rgba(255,255,255,0.9);
+  padding: .75em 1rem;
+  margin-bottom: 1.5rem;
+}
+#fs-frm input:focus,
+#fs-frm select:focus,
+#fs-frm textarea:focus {
+  background-color: white;
+  outline-style: solid;
+  outline-width: thin;
+  outline-color: gray;
+  outline-offset: -1px;
+}
+#fs-frm [type="text"],
+#fs-frm [type="email"] {
+  width: 100%;
+}
+#fs-frm [type="button"],
+#fs-frm [type="submit"],
+#fs-frm [type="reset"] {
+  width: auto;
+  cursor: pointer;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+}
+#fs-frm [type="button"]:focus,
+#fs-frm [type="submit"]:focus,
+#fs-frm [type="reset"]:focus {
+  outline: none;
+}
+#fs-frm [type="submit"],
+#fs-frm [type="reset"] {
+  margin-bottom: 0;
+}
+#fs-frm select {
+  text-transform: none;
+}
+
+#fs-frm [type="checkbox"] {
+  -webkit-appearance: checkbox;
+  -moz-appearance: checkbox;
+  appearance: checkbox;
+  display: inline-block;
+  width: auto;
+  margin: 0 .5em 0 0 !important;
+}
+
+#fs-frm [type="radio"] {
+  -webkit-appearance: radio;
+  -moz-appearance: radio;
+  appearance: radio;
+}
+
+/* address, locale */
+#fs-frm fieldset.locale input[name="city"],
+#fs-frm fieldset.locale select[name="state"],
+#fs-frm fieldset.locale input[name="postal-code"] {
+  display: inline;
+}
+#fs-frm fieldset.locale input[name="city"] {
+  width: 52%;
+}
+#fs-frm fieldset.locale select[name="state"],
+#fs-frm fieldset.locale input[name="postal-code"] {
+  width: 20%;
+}
+#fs-frm fieldset.locale input[name="city"],
+#fs-frm fieldset.locale select[name="state"] {
+  margin-right: 3%;
+}
+</style>
+</div>
+</div>
             </div>
         </div>
+                    
     </body>
 
 </html>
