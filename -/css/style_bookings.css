@@ -889,6 +889,24 @@ div.booking__content p {
 	float:left;
 	/*max-width: 1000px*/
 }
+@media (min-width: 375px) {
+	div.booking__content {
+	float: left;
+	/*margin: 10px 10px 5px;*/
+	position: relative;
+	text-align: left;
+}
+div.booking__content p {
+	/*margin-left: auto;*/
+	/*margin-right: auto;*/
+
+	/*margin-left: %;*/
+	/*margin-right: 30px;*/
+	text-align: left;
+	float:left;
+	/*max-width: 1000px*/
+}
+}
 div.booking__headline {
 	float: left;
 	margin-left: 15%;
