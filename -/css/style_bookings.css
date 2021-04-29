@@ -889,6 +889,12 @@ div.booking__content p {
 	float:left;
 	/*max-width: 1000px*/
 }
+div.booking__note {
+	color: #167ee6;
+	/*font-size: 14px;*/
+}
+
+
 @media (min-width: 375px) {
 	div.booking__content {
 	float: left;
