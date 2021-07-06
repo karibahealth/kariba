@@ -151,7 +151,13 @@
          </label>
             <label for="time_available_specific">Only specific times </label>
     <textarea rows="2" name="specific" id="specific" placeholder="Please give information about when you're available so we can do our best to accomodate." ></textarea>
-        
+        <label for="provider">5. Select the care providers you are happy to see (selecting more providers will ensure you are seen sooner)</label>
+        <label>
+            <input type="checkbox" name="provider_rawson" value="yes"> Dr Rawson &nbsp; &nbsp;
+            <input type="checkbox" name="provider_briggs" value="yes"> Dr Briggs
+
+         </label>
+
         <label>
             <input type="checkbox" name="talk_with_nurse" value="yes"> I am happy to speak to a nurse, when appropriate (usually available sooner)
          </label>
@@ -160,6 +166,9 @@
     
             <label>
             <input type="checkbox" name="understand" value="yes" required=""> I understand that this is not a confirmed appointment, but a request.
+         </label>
+         <label>
+            <input type="checkbox" name="existing" value="yes" required=""> I am an existing patient of the clinic. (no new patient requests, please)
          </label>
               <label>
             <input type="checkbox" name="consent" value="yes" required=""> I consent to electronic communication. &nbsp <a style="color:#167ee6" href="https://www.cmpa-acpm.ca/en/advice-publications/browse-articles/2013/using-electronic-communications-protecting-privacy">more information</a>
