@@ -124,7 +124,7 @@
         <option value="after_date">After a specific date</option>
       </select>
       <label for="urgencyextra"> Details</label>
-    <textarea rows="3" name="urgency_details" id="urgencyextra" placeholder="Please give any specifics here."></textarea>
+    <textarea rows="3" name="urgency_details" id="urgencyextra" maxlength="180" placeholder="Please give any specifics here."></textarea>
      
       <label for="day">3. Which days are you available? (select all that apply)</label>
         <label>
@@ -150,7 +150,7 @@
             <input type="checkbox" name="time_available_afternoons" value="yes"> Afternoons
          </label>
             <label for="time_available_specific">Only specific times </label>
-    <textarea rows="2" name="specific" id="specific" placeholder="Please give information about when you're available so we can do our best to accomodate." ></textarea>
+    <textarea rows="2" name="specific" id="specific" maxlength="180" placeholder="Please give information about when you're available so we can do our best to accomodate." ></textarea>
         <label for="provider">5. Select the care providers you are happy to see (selecting more providers will ensure you are seen sooner)</label>
         <label>
             <input type="checkbox" name="provider_soonest" value="yes" checked> Soonest Available &nbsp; &nbsp;
