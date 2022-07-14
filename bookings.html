@@ -36,7 +36,74 @@
         <script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-171222859-1');</script>
 
     </head>
+    <style>
+        /**
+         * Tooltip Styles
+         */
 
+        /* Add this attribute to the element that needs a tooltip */
+        [data-tooltip] {
+          position: relative;
+          z-index: 2;
+          cursor: pointer;
+        }
+
+        /* Hide the tooltip content by default */
+        [data-tooltip]:before,
+        [data-tooltip]:after {
+          visibility: hidden;
+          -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+          filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=0);
+          opacity: 0;
+          pointer-events: none;
+        }
+
+        /* Position tooltip above the element */
+        [data-tooltip]:before {
+          position: absolute;
+          bottom: 150%;
+          left: 50%;
+          margin-bottom: 5px;
+          margin-left: -80px;
+          padding: 7px;
+          width: 360px;
+          -webkit-border-radius: 3px;
+          -moz-border-radius: 3px;
+          border-radius: 3px;
+          background-color: #000;
+          background-color: hsla(0, 0%, 20%, 0.9);
+          color: #fff;
+          content: attr(data-tooltip);
+          text-align: center;
+          font-size: 14px;
+          line-height: 1.2;
+        }
+
+        /* Triangle hack to make tooltip look like a speech bubble */
+        [data-tooltip]:after {
+          position: absolute;
+          bottom: 150%;
+          left: 50%;
+          margin-left: -5px;
+          width: 0;
+          border-top: 5px solid #000;
+          border-top: 5px solid hsla(0, 0%, 20%, 0.9);
+          border-right: 5px solid transparent;
+          border-left: 5px solid transparent;
+          content: " ";
+          font-size: 0;
+          line-height: 0;
+        }
+
+        /* Show tooltip content on hover */
+        [data-tooltip]:hover:before,
+        [data-tooltip]:hover:after {
+          visibility: visible;
+          -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+          filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
+          opacity: 1;
+        }
+    </style>
     <body>
 
         <div class="layout">
@@ -64,7 +131,7 @@
                 </div>
                 <div class="booking">
                     <div class="booking__content booking__note common-content common-content--theme-white">
-                        <p>* <em>PLEASE NOTE:</em> This is limited to existing Kariba Health Patients only. Please check back soon for New Patient requests.</p>
+                        <p data-tooltip="If you haven't had a  &nbsp [New Patient]  &nbsp  appointment to discuss your medical history and other personal information, please request a &nbsp; [Walk-In] &nbsp; Appointment.">* <em>PLEASE NOTE:</em> If you are not a registered Kariba Health patient, please request a Walk-In (question 6 below)</p>
                     </div>
                 </div>
                     <!-- <div class="banner__booking">
@@ -97,18 +164,19 @@
       <label for="phn-last">Last 4 digits of your Health card number</label>
     <input type="number" name="phn" id="phn-digits" placeholder="9999" required="">
     <fieldset id="fs-frm-selects">
-       <label for="type">1. What is the primary concern for this appointment?</label>
+       <label for="type">1. What is the primary concern for this appointment? (<b>**</b> indicates which types are not available for Walk-In patients)</label>
       <select name="type" id="type" required="">
         <option value="Choose" selected="" disabled="">Choose</option>
         <option value="general">Consultation (new issue)</option>
         <option value="presciption">Prescription</option>
         <option value="counselling">Councelling</option>
-        <option value="well_baby">Well Baby Checkup/Immunization</option>
-        <option value="womens_health">Womens Health/Pap</option>
         <option value="skin">Skin Concern</option>
-        <option value="followup">Followup (existing issue)</option>
-        <option value="results">Discuss results</option>
-        <option value="referral">Referral question</option>
+        <option value="---">--- Only for Registered Patients below ---</option>
+        <option value="well_baby">Well Baby Checkup/Immunization <b>**</b></option>
+        <option value="womens_health">Womens Health/Pap <b>**</b></option>
+        <option value="followup">Followup (existing issue) <b>**</b></option>
+        <option value="results">Discuss results <b>**</b></option>
+        <option value="referral">Referral question <b>**</b></option>
         <option value="other">Other (please give details below)</option>
         
       </select>
@@ -157,25 +225,37 @@
             <input type="checkbox" name="provider_rawson" value="yes" checked> Dr Rawson &nbsp; &nbsp;
             <input type="checkbox" name="provider_briggs" value="yes" checked> Dr Briggs &nbsp; &nbsp;
             <input type="checkbox" name="provider_schultz" value="yes" checked> Dr Schultz &nbsp; &nbsp;
-            <input type="checkbox" name="provider_schultz" value="yes" checked> Dr Man &nbsp; &nbsp;
-            <input type="checkbox" name="provider_man" value="yes" checked> Locum Doctor when applicable
-            
+            <input type="checkbox" name="provider_man" value="yes" checked> Dr Man &nbsp; &nbsp;
+            <input type="checkbox" name="provider_campbell" value="yes" checked> Dr Campbell &nbsp; &nbsp;
+            <input type="checkbox" name="provider_creamer" value="yes" checked> Dr Creamer &nbsp; &nbsp;
+            <input type="checkbox" name="provider_locum" value="yes" checked> Locum Doctor (when applicable)
+
          </label>
+
+        <label for="existing">6. Is this a Walk-in request or are you a registered Kariba Patient &nbsp <span style="color:#167ee6" data-tooltip="If you haven't had a  &nbsp; [New Patient] &nbsp; appointment to discuss your medical history and other personal information, please request a &nbsp; [Walk-In] &nbsp; Appointment.">( what does this mean? )</span></label>
+          <select name="existing" id="existing" required="">
+            <option value="Choose" selected="" disabled="">Choose</option>
+            <option value="registered">Registered</option>
+            <option value="walkin">Walk-In</option>
+          </select>
 
         <label>
             <input type="checkbox" name="talk_with_nurse" value="yes"> I am happy to speak to a nurse, when appropriate (usually available sooner)
          </label>
-          
+
     </fieldset>
     
             <label>
             <input type="checkbox" name="understand" value="yes" required=""> I understand that this is not a confirmed appointment, but a request.
          </label>
-         <label>
-            <input type="checkbox" name="existing" value="yes" required=""> I am an existing patient of the clinic. (no new patient requests, please)
+<!--         <label>-->
+<!--            <input type="checkbox" name="existing" value="yes"> I am an existing patient of the clinic. (no new patient requests, please)-->
+<!--         </label>-->
+      <label>
+            <input type="checkbox" name="bc" value="yes" required=""> I will be in B.C. at the time of the appointment
          </label>
               <label>
-            <input type="checkbox" name="consent" value="yes" required=""> I consent to electronic communication. &nbsp <a style="color:#167ee6" href="https://www.cmpa-acpm.ca/en/advice-publications/browse-articles/2013/using-electronic-communications-protecting-privacy">more information</a>
+            <input type="checkbox" name="consent" value="yes" required=""> I consent to electronic communication. &nbsp <a style="color:#167ee6" href="https://www.cmpa-acpm.ca/en/education-events/good-practices/physician-patient/informed-consent">more information</a>
        
          </label>
             <input type="hidden" name="_subject" id="email-subject" value="Booking Request">
