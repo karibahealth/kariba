@@ -234,30 +234,35 @@
 
         <label for="existing">6. Is this a Walk-in request or are you a registered Kariba Patient &nbsp <span style="color:#167ee6" data-tooltip="If you haven't had a  &nbsp; [New Patient] &nbsp; appointment to discuss your medical history and other personal information, please request a &nbsp; [Walk-In] &nbsp; Appointment.">( what does this mean? )</span></label>
           <select name="existing" id="existing" required="">
-            <option value="Choose" selected="" disabled="">Choose</option>
+            <option value="" selected="" disabled="">Choose</option>
             <option value="registered">Registered</option>
             <option value="walkin">Walk-In</option>
           </select>
-
+        <label for="bc_private">7. Will you be in BC at the time of your appointment. &nbsp <span style="color:#167ee6" data-tooltip="MSP provides coverage for residents of BC while they are in the provice. If the patient is out of province and MSP coverage is denied, a private bill will be issued to cover the appointment fee.">( why is that important? )</span></label>
+          <select name="bc_private" id="bc_private" required="">
+            <option value="" selected="" disabled="">Choose</option>
+            <option value="bc">I confirm I will be in BC at the time of the appointment</option>
+            <option value="private">I will not be in BC, but I want to pay Privately</option>
+          </select>
         <label>
             <input type="checkbox" name="talk_with_nurse" value="yes"> I am happy to speak to a nurse, when appropriate (usually available sooner)
          </label>
-
-    </fieldset>
-    
-            <label>
+         <label>
             <input type="checkbox" name="understand" value="yes" required=""> I understand that this is not a confirmed appointment, but a request.
          </label>
 <!--         <label>-->
 <!--            <input type="checkbox" name="existing" value="yes"> I am an existing patient of the clinic. (no new patient requests, please)-->
 <!--         </label>-->
-      <label>
-            <input type="checkbox" name="bc" value="yes" required=""> I will be in B.C. at the time of the appointment
-         </label>
+<!--      <label>-->
+<!--            <input type="checkbox" name="bc" value="yes" required=""> I will be in B.C. at the time of the appointment-->
+<!--         </label>-->
               <label>
             <input type="checkbox" name="consent" value="yes" required=""> I consent to electronic communication. &nbsp <a style="color:#167ee6" href="https://www.cmpa-acpm.ca/en/education-events/good-practices/physician-patient/informed-consent">more information</a>
-       
-         </label>
+            </label>
+    </fieldset>
+    
+
+
             <input type="hidden" name="_subject" id="email-subject" value="Booking Request">
   </fieldset>
   <input type="submit" value="Submit Request">
