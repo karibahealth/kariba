@@ -1,0 +1,188 @@
+<!doctype html>
+
+<html lang="en">
+
+    <head>
+
+        <title>Kariba &mdash; Your doctor. Simple.</title>
+
+        <meta charset="utf-8" />
+        <meta content="ie=edge" http-equiv="x-ua-compatible" />
+        <meta name="handheldfriendly" content="true" />
+        <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+        <meta name="description" content="Kariba is a virtual family practice taking care of all ages from babies to the most elderly. See your doctor in a new way." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://kariba.ca" />
+        <meta property="og:title" content="Kariba &mdash; Your doctor. Simple." />
+        <meta property="og:description" content="Kariba is a family practice taking care of all ages from babies to the most elderly. See your doctor in a new way." />
+        <meta property="og:image" content="https://kariba.ca/-/img/opengraph.png" />
+
+        <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "WebSite",
+            "name": "Kariba &mdash; Your doctor. Simple.",
+            "headline": "Kariba &mdash; Your doctor. Simple.",
+            "description": "Kariba is a family practice taking care of all ages from babies to the most elderly. See your doctor in a new way.",
+            "url": "https://kariba.ca"
+        }
+        </script>
+
+        <link rel="shortcut icon" type="image/png" href="-/img/icon.png" />
+        <link rel="apple-touch-icon" href="-/img/apple-touch-icon.png" />
+        <link rel="stylesheet" href="-/css/style_bookings.css" />
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-171222859-1"></script>
+        <script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-171222859-1');</script>
+
+    </head>
+    <style>
+        /**
+         * Tooltip Styles
+         */
+
+        /* Add this attribute to the element that needs a tooltip */
+        [data-tooltip] {
+          position: relative;
+          z-index: 2;
+          cursor: pointer;
+        }
+
+        /* Hide the tooltip content by default */
+        [data-tooltip]:before,
+        [data-tooltip]:after {
+          visibility: hidden;
+          -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+          filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=0);
+          opacity: 0;
+          pointer-events: none;
+        }
+
+        /* Position tooltip above the element */
+        [data-tooltip]:before {
+          position: absolute;
+          bottom: 150%;
+          left: 50%;
+          margin-bottom: 5px;
+          margin-left: -80px;
+          padding: 7px;
+          width: 360px;
+          -webkit-border-radius: 3px;
+          -moz-border-radius: 3px;
+          border-radius: 3px;
+          background-color: #000;
+          background-color: hsla(0, 0%, 20%, 0.9);
+          color: #fff;
+          content: attr(data-tooltip);
+          text-align: center;
+          font-size: 14px;
+          line-height: 1.2;
+        }
+
+        /* Triangle hack to make tooltip look like a speech bubble */
+        [data-tooltip]:after {
+          position: absolute;
+          bottom: 150%;
+          left: 50%;
+          margin-left: -5px;
+          width: 0;
+          border-top: 5px solid #000;
+          border-top: 5px solid hsla(0, 0%, 20%, 0.9);
+          border-right: 5px solid transparent;
+          border-left: 5px solid transparent;
+          content: " ";
+          font-size: 0;
+          line-height: 0;
+        }
+
+        /* Show tooltip content on hover */
+        [data-tooltip]:hover:before,
+        [data-tooltip]:hover:after {
+          visibility: visible;
+          -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+          filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
+          opacity: 1;
+        }
+    </style>
+    <body>
+
+        <div class="layout">
+            <div class="container">
+
+                <div class="logo">
+                    <div class="logo__wordmark">
+                      <a href="http://www.kariba.ca">
+                        <svg height="54" viewBox="0 0 205 54" width="205" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M73 35.999c0-9.942-8.059-18-18-18s-18 8.058-18 18c0 9.94 8.059 18 18 18s18-8.06 18-18m2 17.996h17.998V18H75zm37 0h17.998V18H112zm92.997-17.998c0-9.94-8.058-17.998-17.999-17.998-9.94 0-17.998 8.058-17.998 17.998s8.059 17.998 17.998 17.998c9.94 0 17.999-8.058 17.999-17.998M0 53.995h17.998V0H0zm132 0h17.998V0H132z" fill="#255ed6"/><path d="M17.998 35.997c0 9.94 8.059 17.998 17.999 17.998V35.997zm37.002 0c0 9.94 8.058 17.998 17.998 17.998V35.997zm-37.002 0c9.94 0 17.999-8.058 17.999-17.998H17.998zM129.998 9A9 9 0 10112 9a9 9 0 0018 0m-19.002 17.998a9 9 0 10-17.998 0 9 9 0 0017.998 0M187 35.997c0 9.94 8.058 17.998 17.998 17.998V35.997zm-37-17.998v35.997c9.94 0 17.998-8.06 17.998-17.999C167.998 26.057 159.94 18 150 18" fill="#167ee6"/></g></svg>
+                      </a>
+                    </div>
+                </div>
+
+                <div class="fees"><!--
+                    <div class="banner__headline common-headline common-headline--theme-grey">
+                        <h1>Request an appointment.</h1>
+                    </div> -->
+                     <div class="fees__headline common-content common-content--style-serif common-content--theme-grey">
+                        <p>Kariba Health offers services which are not covered by MSP. The fees are in line with those suggested by the provincial health authority.
+                            Please see their website <a href="https://www2.gov.bc.ca/gov/content/health/health-drug-coverage/msp/bc-residents/benefits">here</a> on what is covered and what is not.</p>
+                    </div>
+                    <div class="fees__content common-content common-content--theme-white">
+                        <p>This list contains our common services and the associated fees. Some items may not be here so ask our staff if you have any questions.<br></p>
+                    </div>
+                    <div class="fees__content common-content common-content--theme-white">
+                    <table>
+                      <tr>
+                        <th>Description</th>
+                        <th>Price</th>
+                      </tr>
+                      <tr>
+                        <td>Renewal of prescription via phone or fax</td>
+                        <td>$25</td>
+                      </tr>
+                      <tr>
+                        <td>Note provided by doctor</td>
+                        <td>$10-20</td>
+                      </tr>
+                      <tr>
+                        <td>Completion of a short medical form</td>
+                        <td>$25-45</td>
+                      </tr>
+                      <tr>
+                        <td>Completion of a long medical form</td>
+                        <td>$50-100</td>
+                      </tr>
+                      <tr>
+                        <td>Driver's exam and associated form</td>
+                        <td>$100-190</td>
+                      </tr>
+                      <tr>
+                        <td>Examination for camp, school, sports, etc.</td>
+                        <td>$75</td>
+                      </tr>
+                      <tr>
+                        <td>Use of liquid nitrogen for cosmetic purposes</td>
+                        <td>$35 &amp; up</td>
+                      </tr>
+                      <tr>
+                        <td>Treatment for removal of skin tags</td>
+                        <td>$35 &amp; up</td>
+                      </tr>
+                      <tr>
+                        <td>Removal of moles for cosmetic purposes</td>
+                        <td>$150</td>
+                      </tr>
+                      <tr>
+                        <td>Transfer of medical records to a new family physician</td>
+                        <td>$30-50 per chart requested</td>
+                      </tr>
+                    </table>
+                </div>
+                </div>
+
+
+
+            </div>
+        </div>
+                    
+    </body>
+
+</html>

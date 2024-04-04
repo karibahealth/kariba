@@ -889,12 +889,88 @@ div.booking__content p {
 	float:left;
 	/*max-width: 1000px*/
 }
+
+
+
+div.fees__content {
+	float: left;
+	/*margin: 10px 10px 5px;*/
+	position: relative;
+	text-align: left;
+	width: calc(100% - 60px)
+}
+
+div.fees__content p {
+	/*margin-left: auto;*/
+	/*margin-right: auto;*/
+
+	margin-left: 16%;
+	margin-right: 30px;
+	text-align: left;
+	float:left;
+	/*max-width: 1000px*/
+}
+div.fees__content table {
+	/*margin-left: auto;*/
+	/*margin-right: auto;*/
+    /*background-color:#00ff00;*/
+	margin-left: 16%;
+	margin-right: 30px;
+	text-align: left;
+	float:left;
+	width: calc(100% - 60px);
+	max-width:700px;
+	/*max-width: 1000px*/
+}
+
+div.fees__content table tr td {
+    /*background-color:#ff0000;*/
+    margin-right:20px;
+    }
+
 div.booking__note {
 	color: #167ee6;
 	/*font-size: 14px;*/
 }
 
+@media (min-width: 375px) {
+	div.fees__content {
+	float: left;
+	/*margin: 10px 10px 5px;*/
+	position: relative;
+	text-align: left;
+}
+div.fees__content p {
+	/*margin-left: auto;*/
+	/*margin-right: auto;*/
 
+	/*margin-left: %;*/
+	/*margin-right: 30px;*/
+	text-align: left;
+	float:left;
+	/*max-width: 1000px*/
+}
+div.fees__content table {
+	/*margin-left: auto;*/
+	/*margin-right: auto;*/
+
+	/*margin-left: %;*/
+	/*margin-right: 30px;*/
+	text-align: left;
+	float:left;
+	/*max-width: 1000px*/
+}
+}
+div.fees__headline {
+	float: left;
+	margin-left: 15%;
+	margin-right: 15%;
+	margin-top: 60px;
+	position: relative;
+	text-align: left;
+	width: calc(100% - 60px)
+	max-width:700px;
+}
 @media (min-width: 375px) {
 	div.booking__content {
 	float: left;
@@ -903,6 +979,16 @@ div.booking__note {
 	text-align: left;
 }
 div.booking__content p {
+	/*margin-left: auto;*/
+	/*margin-right: auto;*/
+
+	/*margin-left: %;*/
+	/*margin-right: 30px;*/
+	text-align: left;
+	float:left;
+	/*max-width: 1000px*/
+}
+div.booking__content table {
 	/*margin-left: auto;*/
 	/*margin-right: auto;*/
 
