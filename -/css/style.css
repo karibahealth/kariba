@@ -8,21 +8,20 @@ div.contacts__content,div.contacts__headline{
     color:#000;
     text-align:center;
     width:calc(100% - 60px)}
-div.contacts__headline{margin-bottom:58px;margin-top:58px}
-div.contacts__content{margin-bottom:20px}
-div.contacts__content p{margin-left:auto;margin-right:auto;max-width:800px}
-@media (min-width:1024px){
-div.contacts__content,div.contacts__headline{margin-left:100px;margin-right:100px;width:calc(100% - 200px)}
-div.contacts__headline{margin-bottom:58px;margin-top:68px; text-align:left}
-div.contacts__content{margin-bottom:51px}}
+div.contacts__headline{margin-bottom:58px;margin-top:58px;}
+div.contacts__content{margin-bottom:30px}
+div.contacts__content div.container{max-width:1000px}
+div.contacts__content p{margin-left:auto;margin-right:auto;max-width:1000px; text-align:center; margin-top:0px; color:#323232}
 div.contacts__column,div.contacts__column dl{float:left;margin-left:0;margin-right:0;width:100%;position:relative}
 div.contacts__column dl{margin-bottom:21px}
 div.contacts__column dl dt{font-size:14px;font-weight:500;letter-spacing:.15em;line-height:20px;margin-bottom:1px;text-transform:uppercase}
 div.contacts__column dl dd{float:left;margin-left:0px;margin-right:0;width:100%;position:relative}
 div.contacts__column dl dt{float:left;margin-left:0px;margin-right:0;width:100%;position:relative}
 div.contacts__column a{color:#000}
-@media (min-width:1024px){div.contacts__content,div.contacts__headline{margin-left:100px;margin-right:100px;width:calc(100% - 200px)}
-div.contacts__content{margin-bottom:47px;text-align:left}
+@media (min-width:1024px){
+div.contacts__content,div.contacts__headline{margin-left:100px;margin-right:100px;width:calc(100% - 200px)}
+div.contacts__headline{margin-bottom:28px;margin-top:68px; text-align:center;}
+div.contacts__content{text-align:left}
 div.contacts__column{max-width:400px;width:calc(50% - 50px)}
 div.contacts__column dl{margin-bottom:19px}
 div.contacts__column dl dt{margin-bottom:7px;}
