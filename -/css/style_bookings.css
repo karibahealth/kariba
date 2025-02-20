@@ -923,6 +923,13 @@ div.fees__content table {
 	/*max-width: 1000px*/
 }
 
+div.fees__content table tr th {
+    /*background-color:#ff0000;*/
+    margin-right:20px;
+    font-weight:500;
+    padding-bottom:10px;
+    }
+
 div.fees__content table tr td {
     /*background-color:#ff0000;*/
     margin-right:20px;

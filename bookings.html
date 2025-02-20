@@ -161,13 +161,14 @@
     <input type="phone" name="_phone" id="phone" placeholder="604 555 9999" required=""> 
     <label for="email-address">Email Address</label>
     <input type="email" name="_replyto" id="email-address" placeholder="email@domain.tld" required="">
-      <label for="phn-last">Last 4 digits of your Health card number</label>
+      <label for="phn-last">Last 4 digits of your Health card number &nbsp; <span style="color:#167ee6" data-tooltip="If you are a private pay patient who is not carrying a canadian health card, put 9999">( non-canadian residents use 9999 )</span></label>
     <input type="number" name="phn" id="phn-digits" placeholder="9999" required="">
     <fieldset id="fs-frm-selects">
        <label for="type">1. What is the primary concern for this appointment? (<b>**</b> indicates which types are not available for Walk-In patients)</label>
       <select name="type" id="type" required="">
         <option value="Choose" selected="" disabled="">Choose</option>
         <option value="general">Consultation (new issue)</option>
+        <option value="destination_canada_private">Destination Canada Walk-in Referral</option>
         <option value="presciption">Prescription</option>
         <option value="counselling">Counselling</option>
         <option value="skin">Skin Concern</option>
@@ -226,7 +227,9 @@
 <!--            <input type="checkbox" name="provider_schultz" value="yes" checked> Dr Schultz &nbsp; &nbsp;-->
             <!--            <input type="checkbox" name="provider_man" value="yes" checked> Dr Man &nbsp; &nbsp;-->
             <input type="checkbox" name="provider_campbell" value="yes" checked> Dr Campbell &nbsp; &nbsp;
-            <input type="checkbox" name="provider_zou" value="yes" checked> Dr Zou &nbsp; &nbsp;
+            <input type="checkbox" name="provider_najafi" value="yes" checked> Dr Najafi &nbsp; &nbsp;
+            <input type="checkbox" name="provider_chiang" value="yes" checked> Dr Chiang &nbsp; &nbsp;
+<!--            <input type="checkbox" name="provider_zou" value="yes" checked> Dr Zou &nbsp; &nbsp;-->
 
             <input type="checkbox" name="provider_locum" value="yes" checked> Locum Doctor (when applicable) &nbsp; &nbsp;
         </label>

@@ -48,6 +48,74 @@
       href="https://d1ma8knj6twvg6.cloudfront.net/static/img/loading.svg?t=1620743263"
       as="image"
     />
+      <style>
+        /**
+         * Tooltip Styles
+         */
+
+        /* Add this attribute to the element that needs a tooltip */
+        [data-tooltip] {
+          position: relative;
+          z-index: 2;
+          cursor: pointer;
+        }
+
+        /* Hide the tooltip content by default */
+        [data-tooltip]:before,
+        [data-tooltip]:after {
+          visibility: hidden;
+          -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+          filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=0);
+          opacity: 0;
+          pointer-events: none;
+        }
+
+        /* Position tooltip above the element */
+        [data-tooltip]:before {
+          position: absolute;
+          bottom: 150%;
+          left: 50%;
+          margin-bottom: 5px;
+          margin-left: -80px;
+          padding: 17px;
+          width: 360px;
+          -webkit-border-radius: 8px;
+          -moz-border-radius: 8px;
+          border-radius: 8px;
+          background-color: #000;
+          background-color: hsla(0, 0%, 20%, 0.9);
+          color: #fff;
+          content: attr(data-tooltip);
+          text-align: center;
+          font-size: 14px;
+          line-height: 1.2;
+        }
+
+        /* Triangle hack to make tooltip look like a speech bubble */
+        [data-tooltip]:after {
+          position: absolute;
+          bottom: 150%;
+          left: 50%;
+          margin-left: -5px;
+          width: 0;
+          border-top: 5px solid #000;
+          border-top: 5px solid hsla(0, 0%, 20%, 0.9);
+          border-right: 5px solid transparent;
+          border-left: 5px solid transparent;
+          content: " ";
+          font-size: 0;
+          line-height: 0;
+        }
+
+        /* Show tooltip content on hover */
+        [data-tooltip]:hover:before,
+        [data-tooltip]:hover:after {
+          visibility: visible;
+          -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+          filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
+          opacity: 1;
+        }
+    </style>
   </head>
 
   <body
@@ -69,7 +137,19 @@
     <div class="col-1-1">
       
 <h1>Your Booking Request has been sent!</h1>
-<p>Please give our staff some time to process this request.</p>
+        <div class="common-serif">
+            <p>Please give our staff some time to process this request.</p>
+        </div>
+    <br>
+    <div class="common-sans">
+        <p>
+        <em>Please note</em>: we do require 24 hours notice for any appointment changes or cancellations. Failure to
+            do so will incur a <span style="color:#167ee6" data-tooltip="$30 if you miss a virtual appointment, $50 for an appointment in the clinic.">fee</span>. To view the full <span style="color:#167ee6; text-align:left;" data-tooltip="Every timeslot in the day is booked for one patient encounter with no overlap or double bookings. This helps keep us as on time as possible. As such we ask that you give us a minimum of 24 hours notice for cancellations. Failure to let us know or 'no-showing' wastes the slot which we could otherwise allocate to another patient.">policy</span> or see other frequently asked questions, navigate back to
+            the main site below.
+        </p>
+    </div>
+        <br>
+
 <a target="_top" onclick="window.history.go(-2)" style="margin-top: 1em;">Go back</a>
 
     </div>
