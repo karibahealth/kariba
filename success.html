@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Success | Kariba Health</title>
+
+  <!-- Jost (primary UI font) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --kariba-blue: #2b65d6;
+      --text: #ffffff;
+      --text-dim: rgba(255,255,255,0.86);
+      --text-faint: rgba(255,255,255,0.72);
+      --rule: rgba(255,255,255,0.18);
+
+      /* Font tokens */
+      --font-ui: "Jost", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      --font-brand: "Jost", sans-serif;
+    }
+
+    body{
+      margin:0;
+      font-family: var(--font-ui);
+      background: var(--kariba-blue);
+      color: var(--text);
+    }
+
+    .success-wrap{
+      max-width: 980px;
+      margin: 0 auto;
+      padding: clamp(28px, 4vw, 56px) clamp(20px, 4vw, 56px);
+    }
+
+    /* Brand / logo */
+    .brand{
+      display:flex;
+      align-items:flex-start;
+      justify-content:flex-start;
+      margin-bottom: clamp(22px, 3vw, 34px);
+    }
+
+    .logo__wordmark{
+      display:block;
+    }
+
+    /* Headings */
+    h1{
+      margin: 0 0 10px 0;
+      font-family: var(--font-brand);
+      font-size: clamp(22px, 2.2vw, 28px);
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    .subhead{
+      margin: 0 0 26px 0;
+      color: var(--text-dim);
+      font-style: italic;
+      font-size: clamp(14px, 1.6vw, 16px);
+      line-height: 1.45;
+      max-width: 60ch;
+    }
+
+    /* Fees table */
+    .fees-table{
+      width:100%;
+      border-collapse: collapse;
+    }
+
+    .fees-table thead th{
+      font-family: var(--font-brand);
+      text-align:left;
+      font-size: 13px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      padding: 10px 0 12px 0;
+      border-bottom: 1px solid var(--rule);
+      font-weight: 600;
+    }
+
+    .fees-table thead th:last-child{
+      text-align:right;
+    }
+
+    .fees-table tbody td{
+      padding: 14px 0;
+      vertical-align: top;
+      border-bottom: 1px solid transparent;
+    }
+
+    .service{
+      font-size: clamp(16px, 1.9vw, 18px);
+      line-height: 1.35;
+      color: var(--text);
+      font-weight: 400;
+    }
+
+    .fee{
+      text-align:right;
+      font-weight: 700;
+      font-size: clamp(16px, 2.0vw, 18px);
+      letter-spacing: 0.01em;
+      white-space: nowrap;
+    }
+
+    /* Notes */
+    .notes{
+      margin-top: 34px;
+      padding-top: 22px;
+      border-top: 1px solid var(--rule);
+    }
+
+    .notes ul{
+      margin: 0;
+      padding-left: 18px;
+      color: var(--text-dim);
+      font-style: italic;
+      line-height: 1.55;
+      font-size: 13.5px;
+      letter-spacing: 0.02em;
+    }
+
+    .notes li{
+      margin: 8px 0;
+    }
+
+    /* Responsive */
+    @media (max-width: 640px){
+      .fees-table thead{ display:none; }
+
+      .fees-table, .fees-table tbody, .fees-table tr, .fees-table td{
+        display:block;
+        width:100%;
+      }
+
+      .fees-table tr{
+        padding: 14px 0;
+        border-bottom: 1px solid var(--rule);
+      }
+
+      .fees-table tbody td{
+        padding: 0;
+        border: none;
+      }
+
+      .fee{
+        text-align:left;
+        margin-top: 8px;
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <section class="success-wrap" aria-label="Successfully Subscribed">
+    <div class="brand">
+      <div class="logo__wordmark">
+         <svg height="54" viewBox="0 0 205 54" width="205" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd">
+             <path d="M73 35.999c0-9.942-8.059-18-18-18s-18 8.058-18 18c0 9.94 8.059 18 18 18s18-8.06 18-18m2 17.996h17.998V18H75zm37 0h17.998V18H112zm92.997-17.998c0-9.94-8.058-17.998-17.999-17.998-9.94 0-17.998 8.058-17.998 17.998s8.059 17.998 17.998 17.998c9.94 0 17.999-8.058 17.999-17.998M0 53.995h17.998V0H0zm132 0h17.998V0H132z" fill="#ffffffbb"></path>
+             <path d="M17.998 35.997c0 9.94 8.059 17.998 17.999 17.998V35.997zm37.002 0c0 9.94 8.058 17.998 17.998 17.998V35.997zm-37.002 0c9.94 0 17.999-8.058 17.999-17.998H17.998zM129.998 9A9 9 0 10112 9a9 9 0 0018 0m-19.002 17.998a9 9 0 10-17.998 0 9 9 0 0017.998 0M187 35.997c0 9.94 8.058 17.998 17.998 17.998V35.997zm-37-17.998v35.997c9.94 0 17.998-8.06 17.998-17.999C167.998 26.057 159.94 18 150 18" fill="#ffffff"></path></g></svg>
+      </div>
+    </div>
+
+    <h1>Success</h1>
+
+    <p class="subhead">
+      You have successfully signed up for our service.
+    </p>
+
+
+    <div class="notes" aria-label="Additional notes">
+      <ul>
+        <li>THIS SERVICE PAYMENT IS HOSTED BY <strong>STRIPE</strong> NOT BY KARIBA HEALTH (THE CLINIC). ALL USER SECURITY AND PAYMENTS </li>
+        <li>ARE HANDLED OUTSIDE OF THE CLINIC AND THE CLINIC DEFERS RESPONSIBILITY FOR CLIENT FINANCIAL SERVICES TO STRIPE</li>
+      </ul>
+    </div>
+  </section>
+</body>
+</html>
