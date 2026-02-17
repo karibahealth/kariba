@@ -11,6 +11,17 @@
   <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
 
   <style>
+    a.button{
+      padding: 10px 26px;
+      border: 1px outset buttonborder;
+      border-radius: 24px;
+      color: buttontext;
+      background-color: buttonface;
+      text-decoration: none;
+      margin: 10px;
+      width: 240px;
+    }
+
     :root{
       --kariba-blue: #2b65d6;
       --text: #ffffff;
@@ -66,6 +77,16 @@
       line-height: 1.45;
       max-width: 60ch;
     }
+
+    .details{
+      margin: 20px 0 26px 0;
+      color: var(--text-dim);
+      font-style: italic;
+      font-size: clamp(14px, 1.6vw, 16px);
+      line-height: 1.45;
+      max-width: 60ch;
+    }
+
 
     /* Fees table */
     .fees-table{
@@ -168,17 +189,60 @@
       </div>
     </div>
 
-    <h1>Success</h1>
+      <h2>What it is:</h2>
+      <p class="details">Our After hours nurses advice lice fives enrolled patients access to a registered nurse by phone during evenings and weekends for guidance, triage, and piece of mind</p>
 
-    <p class="subhead">
-      You have successfully signed up for our service.
-    </p>
+      <h2>Hours</h2>
+      <p class="details">
+        <ul>
+    <li> Weekdays: 6pm - 10pm</li>
+    <li> Weekends: 9am - 9pm</li>
+    </ul>
+
+      <h2>What they can help with</h2>
+      <ul>
+        <li>New symptoms
+        <li>Child illness questions</li>
+        <li>Medication side effects</li>
+        <li>"Should I worry?” decisions</li>
+        <li>When to seek urgent or emergency care</li>
+      </ul>
+
+      <h2>What it isnt</h2>
+      <ul>
+        <li>Emergency care
+        <li>Prescription service</li>
+        <li>Diagnosis or treatment plans</li>
+      </ul>
+
+
+    <table width="800" height="300">
+      <tr><td colspan="3">    <h1>Pricing</h1>
+</td></tr>
+      <tr><td colspan="3">      Select from the following services
+</td></tr>
+      <tr><td></td></tr>
+      <tr>
+        <td style="background-color:#ffffff44; padding:16px;">Family Plan</td>
+        <td style="padding:16px;">For up to 5 people living in the same physical location</td>
+        <td><a class='button' href="https://buy.stripe.com/7sY9AT0uNapn6zLeGgeUU05">Family Plan $75</a></td>
+
+    </tr>
+    <tr>
+      <td style="background-color:#ffffff44; padding:16px;">Individual Plan</td>
+      <td style="padding:16px;">For one person only</td>
+      <td>
+      <a class='button' href="https://buy.stripe.com/eVq9ATfpHbtrgal69KeUU06">Individual  $45</a>
+
+      </td>
+    </tr>
+    </table>
+
 
 
     <div class="notes" aria-label="Additional notes">
       <ul>
-        <li>THIS SERVICE PAYMENT IS HOSTED BY <strong>STRIPE</strong> NOT BY KARIBA HEALTH (THE CLINIC). ALL USER SECURITY AND PAYMENTS </li>
-        <li>ARE HANDLED OUTSIDE OF THE CLINIC AND THE CLINIC DEFERS RESPONSIBILITY FOR CLIENT FINANCIAL SERVICES TO STRIPE</li>
+        <li>PLEASE NOTE: ALL TRANSACTIONS ARE HOSTED BY THE EXPERTS AT <strong>STRIPE</strong> AND NOT DIRECTLY BY KARIBA HEALTH (THE CLINIC).</li>
       </ul>
     </div>
   </section>
