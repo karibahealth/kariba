@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Kariba Health Before You Book</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="icon" type="image/png" href="-/img/icon.png" />
+    <link rel="stylesheet" href="-/css/style_thankyou.css" />
+
+    <style>
+      .drawer__booking {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-top: 40px;
+      }
+
+      .drawer__booking .common-link {
+        background: #255ed6;
+        border-radius: 41px;
+        box-sizing: border-box;
+        display: inline-block;
+        position: relative;
+        text-align: center;
+        text-decoration: none;
+        transition: background 0.25s cubic-bezier(.33,1,.68,1);
+        white-space: nowrap;
+      }
+
+      .drawer__booking .common-link strong {
+        color: #fff;
+        display: inline-block;
+        font-family: Jost, sans-serif;
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: 0.15em;
+        line-height: 16px;
+        padding: 13px 60px 12px 35px;
+        text-transform: uppercase;
+      }
+
+      .drawer__booking .common-link span {
+        background: #167ee6;
+        border-radius: 50%;
+        height: 41px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transition: background 0.25s cubic-bezier(.33,1,.68,1);
+        width: 41px;
+      }
+
+      .drawer__booking .common-link span svg {
+        left: 13px;
+        position: absolute;
+        top: 13px;
+      }
+
+      .drawer__booking .common-link span svg path {
+        fill: #fff;
+      }
+
+      .drawer__booking .common-link:hover {
+        background: #ed6954;
+      }
+
+      .drawer__booking .common-link:hover span {
+        background: #f0aa50;
+      }
+
+      .booking-notice-list {
+        padding-left: 20px;
+        margin: 30px 0;
+      }
+
+      .booking-notice-list li {
+        margin-bottom: 18px;
+        line-height: 1.6;
+      }
+
+      .booking-notice-list li strong {
+        color: #255ed6;
+        font-weight: 800;
+      }
+    </style>
+  </head>
+
+  <body class="site" id="card">
+    <div class="site-container">
+      <div class="site-frame" id="site-frame">
+        <main class="container form-status-message">
+          <div class="row">
+            <div class="col-1-1">
+              <h1>Before you book</h1>
+
+              <div class="common-serif">
+                <p>Please take note of the following:</p>
+              </div>
+
+              <div class="common-sans">
+                <ul id="booking-notices" class="booking-notice-list"></ul>
+              </div>
+
+              <div class="drawer__booking">
+                <a href="https://kariba.cortico.ca" class="common-link">
+                  <strong>Make an Appointment</strong>
+                  <span>
+                    <svg
+                      height="15"
+                      viewBox="0 0 16 15"
+                      width="16"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8.7.2L16 7.5l-7.3 7.3-.695-.695 6.105-6.106L0 8V7l14.108-.001L8.005.895z"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </main>
+
+        <div class="container form-status-footer">
+          <div class="v-middle">
+            <span>
+              <a href="http://www.kariba.ca">
+                <svg
+                  height="25"
+                  viewBox="0 0 205 54"
+                  width="105"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g fill="none" fill-rule="evenodd">
+                    <path
+                      d="M73 35.999c0-9.942-8.059-18-18-18s-18 8.058-18 18c0 9.94 8.059 18 18 18s18-8.06 18-18m2 17.996h17.998V18H75zm37 0h17.998V18H112zm92.997-17.998c0-9.94-8.058-17.998-17.999-17.998-9.94 0-17.998 8.058-17.998 17.998s8.059 17.998 17.998 17.998c9.94 0 17.999-8.058 17.999-17.998M0 53.995h17.998V0H0zm132 0h17.998V0H132z"
+                      fill="#255ed6"
+                    />
+                    <path
+                      d="M17.998 35.997c0 9.94 8.059 17.998 17.999 17.998V35.997zm37.002 0c0 9.94 8.058 17.998 17.998 17.998V35.997zm-37.002 0c9.94 0 17.999-8.058 17.999-17.998H17.998zM129.998 9A9 9 0 10112 9a9 9 0 0018 0m-19.002 17.998a9 9 0 10-17.998 0 9 9 0 0017.998 0M187 35.997c0 9.94 8.058 17.998 17.998 17.998V35.997zm-37-17.998v35.997c9.94 0 17.998-8.06 17.998-17.999C167.998 26.057 159.94 18 150 18"
+                      fill="#167ee6"
+                    />
+                  </g>
+                </svg>
+              </a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const bookingNotices = [
+        {
+          title: "Weekend Appointments Available",
+          text:
+            "Need a weekend appointment? Dr. Shokri will be seeing patients on Saturday 23 May and Saturday 30 May! Make your requests now before they fill up!"
+        },
+        {
+          title: "New Physician",
+          text:
+            "We are very pleased to welcome Dr. Shokri to the team! She will be offering expanded options for our patients and we are happy to have her"
+        }
+
+
+      ];
+
+      const noticeList = document.getElementById("booking-notices");
+
+      bookingNotices.forEach((item) => {
+        const li = document.createElement("li");
+
+        li.innerHTML = `
+          <strong>${item.title}:</strong>
+          ${item.text}
+        `;
+
+        noticeList.appendChild(li);
+      });
+    </script>
+  </body>
+</html>
